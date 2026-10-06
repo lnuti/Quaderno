@@ -1,0 +1,96 @@
+/* Sito esercizi - Matematica primo anno. Nessuna risorsa esterna: font di sistema + font matematico incluso. */
+@font-face{font-family:"Latin Modern Math";src:url("latinmodern-math.woff") format("woff");font-display:swap}
+:root{--navy:#16233a;--azure:#2f6fed;--azureD:#2559c9;--amber:#ffc93c;
+  --bg:#fbf7ee;--card:#ffffff;--ink:#16233a;--muted:#5b6678;--line:#e4dfd2;--soft:#f1ece0}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#0f1829;--card:#172338;--ink:#eef1f7;--muted:#a6b0c2;--line:#2a3a56;--soft:#1d2c46;--azureD:#8fb4ff}
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  font-size:1.0625rem;line-height:1.6}
+math{font-family:"Latin Modern Math",math;font-size:1.15em}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 3rem}
+a{color:var(--azureD)}
+a:focus-visible,summary:focus-visible,button:focus-visible{outline:3px solid var(--amber);outline-offset:2px}
+
+.top{background:var(--navy);color:#fff;border-radius:0 0 18px 18px;padding:.8rem 1rem 1.3rem}
+.top .in{max-width:46rem;margin:0 auto}
+.nav{display:flex;justify-content:space-between;gap:.5rem;font-size:.9rem;margin-bottom:.9rem}
+.nav a{color:#ffd978;text-decoration:none}
+.hd{display:flex;align-items:center;gap:.9rem}
+.badge{flex:none;width:3.1rem;height:3.1rem;border-radius:50%;background:#fff;color:var(--navy);
+  display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.35rem}
+.hd h1{margin:0;font-size:1.35rem;line-height:1.2;letter-spacing:.01em;text-transform:uppercase}
+.hd p{margin:.15rem 0 0;color:#c7d0e2;font-style:italic;font-size:.95rem}
+
+.how{background:var(--soft);border:1px solid var(--line);border-radius:12px;padding:.8rem 1rem;margin:1.1rem 0;font-size:.97rem}
+.tools{margin:.2rem 0 0;text-align:right}
+button{font:inherit;font-weight:600;font-size:.92rem;border:2px solid var(--navy);background:transparent;color:var(--ink);
+  border-radius:999px;padding:.55rem 1rem;min-height:44px;cursor:pointer}
+@media (prefers-color-scheme:dark){button{border-color:var(--amber)}}
+
+h2.lv{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem;margin:1.9rem 0 .2rem;font-size:1.02rem;text-transform:uppercase;letter-spacing:.03em}
+h2.lv .l{background:var(--navy);color:#fff;border-radius:7px;padding:.12rem .55rem;font-weight:800}
+h2.lv small{text-transform:none;letter-spacing:0;font-weight:400;font-style:italic;color:var(--muted);font-size:.93rem}
+.lvE .l{background:var(--amber);color:var(--navy)}
+.lvC .l{background:var(--azure)}
+
+.ex{display:flex;gap:.8rem;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:.95rem;margin:.8rem 0}
+.num{flex:none;width:2rem;height:2rem;border-radius:50%;background:var(--navy);color:#fff;font-weight:700;font-size:.95rem;
+  display:flex;align-items:center;justify-content:center;margin-top:.1rem}
+.body{flex:1;min-width:0}
+.txt p{margin:0}
+.sub{list-style:none;margin:.45rem 0 0;padding:0}
+.sub li{display:flex;gap:.55rem;padding:.2rem 0}
+.lab{flex:none;min-width:1.5rem;font-weight:700;color:var(--azureD)}
+.sub li>span:last-child{min-width:0}
+
+details.sol{margin-top:.8rem}
+summary{display:inline-flex;align-items:center;min-height:44px;padding:0 1.05rem;border-radius:999px;
+  background:var(--navy);color:#fff;font-weight:600;font-size:.95rem;cursor:pointer;list-style:none;user-select:none}
+summary::-webkit-details-marker{display:none}
+summary::before{content:"\25B8";margin-right:.45rem;color:var(--amber)}
+details[open] summary::before{content:"\25BE"}
+.sbody{margin-top:.6rem;padding:.7rem .9rem;border-left:5px solid var(--amber);background:var(--soft);border-radius:0 10px 10px 0}
+.sbody p{margin:0}
+
+.bottom{display:flex;flex-wrap:wrap;gap:.6rem;justify-content:space-between;margin:2rem 0 1rem}
+.bottom a{display:inline-flex;align-items:center;min-height:44px;padding:0 1rem;border-radius:999px;border:2px solid var(--navy);
+  text-decoration:none;font-weight:600;color:var(--ink)}
+.bottom a.pdf{background:var(--amber);border-color:var(--amber);color:var(--navy)}
+@media (prefers-color-scheme:dark){.bottom a{border-color:var(--amber)}}
+footer{color:var(--muted);font-size:.85rem;border-top:1px solid var(--line);padding-top:1rem;margin-top:1.5rem}
+
+/* indice */
+.grid{display:grid;gap:.7rem;grid-template-columns:1fr;margin:1.2rem 0}
+@media (min-width:560px){.grid{grid-template-columns:1fr 1fr}}
+.card{display:flex;align-items:center;gap:.85rem;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:.85rem;
+  text-decoration:none;color:var(--ink);min-height:4.2rem}
+.card:hover{border-color:var(--azure)}
+.card .badge{width:2.6rem;height:2.6rem;font-size:1.1rem;background:var(--navy);color:#fff}
+.card b{display:block;line-height:1.25}
+.card small{color:var(--muted)}
+.steps{margin:.3rem 0 0;padding-left:1.2rem}
+
+/* rete di sicurezza: una formula che non riesce ad andare a capo scorre dentro il suo riquadro */
+.txt,.sbody{overflow-x:auto;overflow-y:hidden}
+
+/* schermi stretti: meno margini annidati, cosi' le formule hanno piu' spazio */
+@media (max-width:430px){
+  .wrap{padding-left:.75rem;padding-right:.75rem}
+  .top{padding-left:.75rem;padding-right:.75rem}
+  .ex{gap:.5rem;padding:.8rem .7rem}
+  .num{width:1.7rem;height:1.7rem;font-size:.85rem}
+  .sbody{padding:.55rem .6rem;border-left-width:4px}
+  .sub li{gap:.4rem}
+  .lab{min-width:1.2rem}
+}
+@media (max-width:380px){ math{font-size:1.05em} body{font-size:1rem} }
+
+.card small{display:block;line-height:1.35;margin-top:.15rem}
+
+.nb{white-space:nowrap}
+
+.txt>.sub:first-child{margin-top:0}
